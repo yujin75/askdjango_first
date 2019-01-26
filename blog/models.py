@@ -24,5 +24,8 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)    #길이 제한 있는 문자열
     updated_at = models.DateTimeField(auto_now=True)    #길이 제한 없는 문자열
 
+    class Meta:
+        ordering = ['-id']
+
     def __str__(self):
         return self.title
