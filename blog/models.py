@@ -23,3 +23,6 @@ class Post(models.Model):
     status = models.CharField(max_length=1, choices=STATUS_CHOICES)
     created_at = models.DateTimeField(auto_now_add=True)    #길이 제한 있는 문자열
     updated_at = models.DateTimeField(auto_now=True)    #길이 제한 없는 문자열
+
+    def __str__(self):
+        return self.title
