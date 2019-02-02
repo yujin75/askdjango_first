@@ -3,8 +3,8 @@ import os
 from django.conf import settings
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
-from dojo.forms import PostForm
-from dojo.models import Post
+from .forms import PostForm
+from .models import Post
 
 
 def post_new(request):
@@ -14,7 +14,7 @@ def post_new(request):
             post = form.save(commit=False)
             post.ip = request.META['REMOTE_ADDR']
             post.save()
-            return redirect('/dojo/') #namespace:name
+            return redirect('/dojo/')
     else:
         form = PostForm()
     return render(request, 'dojo/post_form.html', {
@@ -37,7 +37,7 @@ def post_edit(request, id):
         })
 
 def mysum(request, numbers):
-    result = sum(map(lambda s:int(s or 0), numbers.split("/")))
+    result = sum(map(lambda s: int(s or 0), numbers.split("/")))
     return HttpResponse(result)
 
 
@@ -63,7 +63,7 @@ def post_list3(request):
     return JsonResponse({
         'message': '안녕 파이썬&장고',
         'items': ['파이썬', '장고', 'Celery', 'Azure', 'AWS'],
-    }, json_dumps_params={'ensure_ascii' : False})
+    }, json_dumps_params={'ensure_ascii': False})
 
 
 def excel_download(request):

@@ -1,7 +1,6 @@
 #dojo/forms.py
 from django import forms
-
-from dojo.models import Post
+from .models import Post
 
 class PostForm(forms.ModelForm):
     class Meta:

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'bootstrap3',
     'blog',
     'dojo',
     'debug_toolbar',
@@ -128,4 +129,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-INTERNAL_IPS = ['127.0.0.1',]
+INTERNAL_IPS = ['127.0.0.1']

@@ -2,6 +2,8 @@
 from django.core.validators import MinLengthValidator
 from django.db import models
 from django.forms import forms
+from django.urls import reverse
+
 
 def min_length_3_validator(value):
     if len(value) < 3:
@@ -14,7 +16,6 @@ class Post(models.Model):
     ip = models.CharField(max_length=15)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
 
 class GameUser(models.Model):
     server_name = models.CharField(max_length=10,
