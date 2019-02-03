@@ -39,12 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'bootstrap3',
-    'imagekit',
     'blog',
     'dojo',
     'debug_toolbar',
     'accounts',
     'shop',
+    'imagekit',
 ]
 
 MIDDLEWARE = [
