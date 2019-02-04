@@ -4,6 +4,7 @@ from .models import Post
 
 post_list = ListView.as_view(model=Post, paginate_by=10)
 
+# ep31)DetailView 적용
 post_detail = DetailView.as_view(model=Post)
 
 #blog/forms.py
