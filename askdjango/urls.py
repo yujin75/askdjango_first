@@ -28,7 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls', namespace='blog')),
     path('dojo/', include('dojo.urls', namespace='dojo')),
-    path('accounts/', include('accounts.urls', namespace='accounts')),
+    path('accounts/', include('accounts.urls')),
     path('shop/', include('shop.urls', namespace='shop')),
 ]
 

@@ -7,6 +7,7 @@ from .forms import PostForm
 
 
 def post_list(request):
+
     qs = Post.objects.all()
 
     q = request.GET.get('q', '')
